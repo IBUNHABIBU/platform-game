@@ -1,5 +1,5 @@
 import 'phaser';
-import logoImg from "../assets/logo.png";
+import logoImg from "../assets/zenva_logo.png";
 export default class GameScene extends Phaser.Scene{
   constructor(){
     super('Game');
