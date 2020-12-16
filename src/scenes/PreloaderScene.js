@@ -1,8 +1,10 @@
-import logoImg from "../assets/logo.png";
+import 'phaser';
+
 export default class PreloaderScene extends Phaser.Scene{
   preload () {
     // add logo image
-    this.add.image(400, 200, 'logo');
+    this.load.image('logo', 'assets/logo.png');
+    this.add.image(400,200,'logo');
    
     // display progress bar
     var progressBar = this.add.graphics();
