@@ -1,5 +1,5 @@
 import 'phaser';
-
+import config from '../Config/config';
 export default class BootScene extends Phaser.Scene{
   constructor(){
     super('Boot');
@@ -11,4 +11,4 @@ export default class BootScene extends Phaser.Scene{
   create () {
     this.scene.start('Preloader');
   }
-}
+};
