@@ -1,10 +1,10 @@
 import 'phaser';
-
-import blueButton2 from"../assets/ui/blue_button02.png";
-import blueButton3 from"../assets/ui/blue_button03.png";
-import logo from"../assets/logo.png";
-import greyBox from"../assets/ui/grey_box.png";
-import blueBoxCheckMark from"../assets/ui/blue_boxCheckmark.png";
+import blueButton2 from "../assets/ui/blue_button02.png";
+import blueButton3 from "../assets/ui/blue_button03.png";
+import logo from "../assets/logo.png";
+import greyBox from "../assets/ui/grey_box.png";
+import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
+import bgMusic from "../assets/audio/TownTheme.mp3";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
@@ -18,7 +18,7 @@ export default class PreloaderScene extends Phaser.Scene{
   preload () {
     // add logo image
     this.add.image(400, 200, 'logo');
-   
+
     // display progress bar
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
@@ -48,7 +48,7 @@ export default class PreloaderScene extends Phaser.Scene{
       }
     });
     percentText.setOrigin(0.5, 0.5);
-   
+
     var assetText = this.make.text({
       x: width / 2,
       y: height / 2 + 50,
@@ -59,8 +59,7 @@ export default class PreloaderScene extends Phaser.Scene{
       }
     });
     assetText.setOrigin(0.5, 0.5);
-   
-    // update progress bar
+
     this.load.on('progress', function (value) {
       percentText.setText(parseInt(value * 100) + '%');
       progressBar.clear();
@@ -82,8 +81,6 @@ export default class PreloaderScene extends Phaser.Scene{
       assetText.destroy();
     });
    
-
-  // remove progress bar when complete
 this.load.on('complete', function () {
   progressBar.destroy();
   progressBox.destroy();
@@ -95,14 +92,12 @@ this.load.on('complete', function () {
  
 this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
  
-// load assets needed in our game
-// this.load.image('zenvaLogo', zenvaLogo);
 this.load.image('blueButton2', blueButton2);
 this.load.image('blueButton3', blueButton3);
 this.load.image('logo', logo);
 this.load.image('greyBox', greyBox);
 this.load.image('blueBoxCheckMar', blueBoxCheckMark);
-// this.load.audio('bgMusic', ['../assets/TownTheme.mp3']);
+this.load.audio('bgMusic', ['assets/audio/TownTheme.mp3']);
 }
 
 ready () {
