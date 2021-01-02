@@ -2,7 +2,7 @@ import 'phaser';
 import blueButton2 from "../assets/ui/blue_button02.png";
 import blueButton3 from "../assets/ui/blue_button03.png";
 import logo from "../assets/logo.png";
-import greyBox from "../assets/ui/grey_box.png";
+import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
 
@@ -95,8 +95,8 @@ this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 this.load.image('blueButton2', blueButton2);
 this.load.image('blueButton3', blueButton3);
 this.load.image('logo', logo);
-this.load.image('greyBox', greyBox);
-this.load.image('blueBoxCheckMar', blueBoxCheckMark);
+this.load.image('box', box);
+this.load.image('blueBoxCheckMark', blueBoxCheckMark);
 this.load.audio('bgMusic', ['assets/audio/TownTheme.mp3']);
 }
 
