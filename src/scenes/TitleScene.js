@@ -1,5 +1,6 @@
 import 'phaser';
  
+import config from '../Config/config';
 export default class TitleScene extends Phaser.Scene {
   constructor () {
     super('Title');
@@ -7,7 +8,7 @@ export default class TitleScene extends Phaser.Scene {
 
   create () {
     // Game
-this.gameButton = this.add.sprite(100, 200, 'blueButton1').setInteractive();
+this.gameButton = this.add.sprite(100, 200, 'blueButton2').setInteractive();
 this.centerButton(this.gameButton, 1);
  
 this.gameText = this.add.text(0, 0, 'Play', { fontSize: '32px', fill: '#fff' });
@@ -18,13 +19,13 @@ this.gameButton.on('pointerdown', function (pointer) {
 }.bind(this));
  
 this.input.on('pointerover', function (event, gameObjects) {
-  gameObjects[0].setTexture('blueButton2');
+  gameObjects[0].setTexture('blueButton3');
 });
  
 this.input.on('pointerout', function (event, gameObjects) {
-  gameObjects[0].setTexture('blueButton1');
+  gameObjects[0].setTexture('blueButton2');
 });
-this.menuButton = this.add.sprite(400, 500, 'blueButton1').setInteractive();
+this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
 this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
 Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
  

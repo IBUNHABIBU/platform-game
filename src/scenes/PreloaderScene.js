@@ -1,5 +1,11 @@
 import 'phaser';
 
+import blueButton2 from"../assets/ui/blue_button02.png";
+import blueButton3 from"../assets/ui/blue_button03.png";
+import logo from"../assets/logo.png";
+import greyBox from"../assets/ui/grey_box.png";
+import blueBoxCheckMark from"../assets/ui/blue_boxCheckmark.png";
+
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
     super('Preloader');
@@ -76,10 +82,6 @@ export default class PreloaderScene extends Phaser.Scene{
       assetText.destroy();
     });
    
-    // load assets needed in our game
-    this.load.image('blueButton1', 'assets/ui/blue_button02.png');
-    this.load.image('blueButton2', 'assets/ui/blue_button03.png');
-    this.load.image('phaserLogo', 'assets/logo.png');
 
   // remove progress bar when complete
 this.load.on('complete', function () {
@@ -94,18 +96,17 @@ this.load.on('complete', function () {
 this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
  
 // load assets needed in our game
-this.load.image('blueButton1', 'assets/ui/blue_button02.png');
-this.load.image('blueButton2', 'assets/ui/blue_button03.png');
-this.load.image('phaserLogo', 'assets/logo.png');
-
-this.load.image('phaserLogo', 'assets/logo.png');
-this.load.image('box', 'assets/ui/grey_box.png');
-this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
-this.load.audio('bgMusic', ['assets/TownTheme.mp3']);
+// this.load.image('zenvaLogo', zenvaLogo);
+this.load.image('blueButton2', blueButton2);
+this.load.image('blueButton3', blueButton3);
+this.load.image('logo', logo);
+this.load.image('greyBox', greyBox);
+this.load.image('blueBoxCheckMar', blueBoxCheckMark);
+// this.load.audio('bgMusic', ['../assets/TownTheme.mp3']);
 }
 
 ready () {
-  this.scene.start('Credits');
+  this.scene.start('Title');
   this.readyCount++;
   if (this.readyCount === 2) {
     this.scene.start('Title');
