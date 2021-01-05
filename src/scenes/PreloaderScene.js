@@ -5,7 +5,6 @@ import logo from "../assets/logo.png";
 import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
-console.log(bgMusic)
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
