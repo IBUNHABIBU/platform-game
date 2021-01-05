@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
+console.log(bgMusic)
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
@@ -97,7 +98,7 @@ this.load.image('blueButton3', blueButton3);
 this.load.image('logo', logo);
 this.load.image('box', box);
 this.load.image('blueBoxCheckMark', blueBoxCheckMark);
-this.load.audio('bgMusic', ['assets/audio/TownTheme.mp3']);
+this.load.audio('bgMusic', bgMusic);
 }
 
 ready () {
