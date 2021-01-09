@@ -7,11 +7,11 @@
 
 <p align="center">
   <a href="git@github.com:IBUNHABIBU/platform-game.git">
-    <p align="center"> <img src="https://user-images.githubusercontent.com/55361440/87301597-7d9f1800-c52d-11ea-84e7-7a5684626b3f.png" alt="JavaScript" width="100" height="100"> </p>
+    <p align="center"> <img src="https://user-images.githubusercontent.com/55361440/87301597-7d9f1800-c52d-11ea-84e7-7a5684626b3f.png" alt="Phaser" width="100" height="100"> </p>
   </a>
 
-  <h2 align="center"> JAVASCRIPT TIC TAC TOE GAME</h2>
-  <h3 align="center"> This project is part of the Microverse curriculum in JavaScript module to implement the concept of Factory function and test driven development</h3>
+  <h2 align="center"> PLATFORM GAME</h2>
+  <h3 align="center"> This project is part of the Microverse curriculum in JavaScript module to design a platfom game using phaser library and test driven development</h3>
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Report Bug</a>
