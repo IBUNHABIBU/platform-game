@@ -5,5 +5,6 @@ export default class GameScene extends Phaser.Scene{
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
+    this.environment = this.add.image(240,320, 'environment');
   }
 }
