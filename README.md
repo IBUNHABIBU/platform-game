@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="git@github.com:IBUNHABIBU/platform-game.git">
-    <p align="center"> <img src="https://user-images.githubusercontent.com/55361440/87301597-7d9f1800-c52d-11ea-84e7-7a5684626b3f.png" alt="Phaser" width="100" height="100"> </p>
+    <p align="center"> <img src="https://raw.githubusercontent.com/github/explore/b7c8510756ee50efb38d1f01896e72b7a9737296/topics/phaser/phaser.png" alt="Phaser" width="100" height="100"> </p>
   </a>
 
   <h2 align="center"> PLATFORM GAME</h2>
