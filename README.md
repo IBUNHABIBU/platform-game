@@ -1,15 +1,90 @@
-# Phaser 3 Webpack Project Template
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/)
-that includes hot-reloading for development and production-ready builds.
+<br />
 
-Loading images via JavaScript module `import` is also supported.
+<p align="center">
+  <a href="git@github.com:IBUNHABIBU/platform-game.git">
+    <p align="center"> <img src="https://user-images.githubusercontent.com/55361440/87301597-7d9f1800-c52d-11ea-84e7-7a5684626b3f.png" alt="JavaScript" width="100" height="100"> </p>
+  </a>
 
-## Requirements
+  <h2 align="center"> JAVASCRIPT TIC TAC TOE GAME</h2>
+  <h3 align="center"> This project is part of the Microverse curriculum in JavaScript module to implement the concept of Factory function and test driven development</h3>
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+  <p align="center">
+    <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Report Bug</a>
+    · 
+    <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Request Feature</a>
+  </p>
+</p>
 
-## Available Commands
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+  * [Features](#features)
+  * [Requirements](#requirements)
+  * [Useful commands](#useful commands)
+* [Contact](#Authors)
+* [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+In this project, I have build a Tic Tac Toe game. The project follows the lesson about Factory Functions and The Module Pattern so the main goal is to put into practice those concepts along with the main concepts of Object Oriented Programming. Particularly, classes/objects, testing and how to access their methods and attributes.
+
+### Features
+
+- User can play with computer player.
+- It display the winning message.
+- It display the draw when the game is draw.
+
+
+## [Live demo](https://ibunhabibgame.netlify.app/ "Of the project")
+<br/>
+<div align="center">
+
+<img  src="https://github.com/IBUNHABIBU/tic-tac-toe-game/blob/feature/src/Images/4e6rgj.gif" />
+</div>
+
+<!-- BUILD WITH -->
+## Built With
+
+This project was built using these technologies.
+* HTML
+* CSS
+* JavaScript
+* Jest
+
+### Requirement
+
+- npm
+- webpack
+- jest
+
+### How to Install 
+
+To run Library-project locally, clone the repository, navigate to it's containing directory.
+
+#### Follow these commands step by step:-
+
+```bash
+git@github.com:IBUNHABIBU/tic-tac-toe-game.git
+cd tic-tac-toe-game
+```
+ `$npm install `
+ 
+ `$npm run start`
+Enjoy playing it.
+
+### Testing
+
+ `$npm run test `
+
+
+## Useful Commands
 
 | Command | Description |
 |---------|-------------|
@@ -17,41 +92,40 @@ Loading images via JavaScript module `import` is also supported.
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
-## Writing Code
+### How to play
+- Click on the box to put mark "X" untill you game over.
+- The human will mark X while the computer will mark O.
+<!-- CONTACT -->
+## Authors
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development
-server by running `npm start`.
+👤 **Salum Habibu** 
+    
+* Github: [IBUNHABIBU](https://github.com/IBUNHABIBU)
+* Twitter: [@ibunhabibu](https://twitter.com/Ibunhabibu)
+* LinkedIn: [Salum Habibu Kombo](https://www.linkedin.com/in/salum-habibu/)
+
+## Show your support
+
+Give a :star: if you like this project!
 
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder
-and webpack will automatically recompile and reload your server (available at `http://localhost:8080`
-by default).
+## Acknowledgments
+Credits goes to all Mr Christian Ceamatu who helped me when I'm stuck.
 
-## Customizing the Template
+All my standup team for their help.
 
-### Babel
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you
-want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently
-targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/tic-tac-toe-game.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/tic-tac-toe-game.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/tic-tac-toe-game.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/tic-tac-toe-game.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/issues
 
-  ```
-  "browsers": [
-    ">0.25%",
-    "not ie 11",
-    "not op_mini all"
-  ]
-  ```
+## 📝 License
 
-### Webpack
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can
-modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create
-new configuration files and target them in specific npm tasks inside of `package.json'.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-## Deploying Code
-After you run the `npm run build` command, your code will be built into a single bundle located at 
-`dist/bundle.min.js` along with any other assets you project depended. 
-
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), 
-you should be able to open `http://mycoolserver.com/index.html` and play your game.
-# platform-game
-# platform-game
