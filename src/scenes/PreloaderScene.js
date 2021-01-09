@@ -6,12 +6,12 @@ import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
 
-import fish1 from "../assets/images/fishTile_072.png";
-import fish2 from "../assets/images/fishTile_073.png";
-import fish3 from "../assets/images/fishTile_074.png";
-import fish4 from "../assets/images/fishTile_075.png";
-import fish5 from "../assets/images/fishTile_076.png";
-import background from "../assets/images/bg_layer1.png";
+// import fish1 from "../assets/images/fishTile_072.png";
+// import fish2 from "../assets/images/fishTile_073.png";
+// import fish3 from "../assets/images/fishTile_074.png";
+// import fish4 from "../assets/images/fishTile_075.png";
+// import fish5 from "../assets/images/fishTile_076.png";
+import background from "../assets/images/fishTile_089.png";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
@@ -105,11 +105,6 @@ this.load.image('logo', logo);
 this.load.image('box', box);
 this.load.image('blueBoxCheckMark', blueBoxCheckMark);
 this.load.audio('bgMusic', bgMusic);
-this.load.image('fish1', fish1)
-this.load.image('fish4', fish4)
-this.load.image('fish2', fish2)
-this.load.image('fish3', fish3)
-this.load.image('fish5', fish5)
 this.load.image('background', background)
 }
 
