@@ -26,7 +26,7 @@
   * [Built With](#built-with)
   * [Features](#features)
   * [Requirements](#requirements)
-  * [Useful commands](#useful commands)
+  * [Useful commands](#useful-commands)
 * [Contact](#Authors)
 * [Acknowledgements](#acknowledgements)
 
