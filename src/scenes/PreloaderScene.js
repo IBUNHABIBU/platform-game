@@ -6,7 +6,7 @@ import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
 
-import environment from "../assets/images/ground_grass.png";
+import platform from "../assets/images/ground_grass.png";
 // import fish2 from "../assets/images/fishTile_073.png";
 // import fish3 from "../assets/images/fishTile_074.png";
 // import fish4 from "../assets/images/fishTile_075.png";
@@ -106,7 +106,7 @@ this.load.image('box', box);
 this.load.image('blueBoxCheckMark', blueBoxCheckMark);
 this.load.audio('bgMusic', bgMusic);
 this.load.image('background', background)
-this.load.image('environment', environment)
+this.load.image('platform', platform)
 }
 
 ready () {
