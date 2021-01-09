@@ -11,8 +11,7 @@ import fish2 from "../assets/images/fishTile_073.png";
 import fish3 from "../assets/images/fishTile_074.png";
 import fish4 from "../assets/images/fishTile_075.png";
 import fish5 from "../assets/images/fishTile_076.png";
-import sample from "../assets/images/sample.png";
-import background from "../assets/images/fishTile_088.png";
+import background from "../assets/images/bg_layer1.png";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
@@ -111,7 +110,6 @@ this.load.image('fish4', fish4)
 this.load.image('fish2', fish2)
 this.load.image('fish3', fish3)
 this.load.image('fish5', fish5)
-this.load.image('sample', sample)
 this.load.image('background', background)
 }
 
