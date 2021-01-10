@@ -7,7 +7,6 @@ export default class GameScene extends Phaser.Scene{
     this.bg = this.add.image(240,320, 'background');
     this.player = this.add.image(480,283,'player');
     //   this.player.x += 1;
-     
   }
   update(){
     var keyObj = this.input.keyboard.addKey('LEFT');
@@ -15,5 +14,6 @@ export default class GameScene extends Phaser.Scene{
     if(isDown){
       this.player.x -= 1;
     }
+   
   }
 }

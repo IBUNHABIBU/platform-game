@@ -13,6 +13,7 @@ import fish4 from "../assets/images/fishTile_075.png";
 import fish5 from "../assets/images/fishTile_076.png";
 import player from "../assets/images/fishTile_077.png";
 import background from "../assets/images/bg_layer1.png";
+import spriteFish from "../assets/images/fishSpritesheet.png";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
@@ -109,6 +110,12 @@ this.load.audio('bgMusic', bgMusic);
 this.load.image('background', background);
 this.load.image('platform', platform);
 this.load.image('player', player);
+this.load.image('fish4', fish4);
+this.load.image('fish5', fish5);
+this.load.image('fish2', fish2);
+this.load.image('fish3', fish3);
+this.load.spritesheet('spriteFish', spriteFish, {frameWidth: 70, frameHeight: 100 });
+this.load.spritesheet('spriteFish2', spriteFish2, {frameWidth: 60, frameHeight: 60 });
 }
 
 ready () {
