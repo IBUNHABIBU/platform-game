@@ -14,6 +14,7 @@ import fish5 from "../assets/images/fishTile_076.png";
 import player from "../assets/images/fishTile_077.png";
 import background from "../assets/images/bg_layer1.png";
 import spriteFish from "../assets/images/fishSpritesheet.png";
+import spriteFish2 from "../assets/images/fishSpritesheet@2.png";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
