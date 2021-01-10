@@ -7,10 +7,11 @@ import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
 
 import platform from "../assets/images/ground_grass.png";
-// import fish2 from "../assets/images/fishTile_073.png";
-// import fish3 from "../assets/images/fishTile_074.png";
-// import fish4 from "../assets/images/fishTile_075.png";
-// import fish5 from "../assets/images/fishTile_076.png";
+import fish2 from "../assets/images/fishTile_073.png";
+import fish3 from "../assets/images/fishTile_074.png";
+import fish4 from "../assets/images/fishTile_075.png";
+import fish5 from "../assets/images/fishTile_076.png";
+import player from "../assets/images/fishTile_077.png";
 import background from "../assets/images/bg_layer1.png";
 
 export default class PreloaderScene extends Phaser.Scene{
@@ -105,8 +106,9 @@ this.load.image('logo', logo);
 this.load.image('box', box);
 this.load.image('blueBoxCheckMark', blueBoxCheckMark);
 this.load.audio('bgMusic', bgMusic);
-this.load.image('background', background)
-this.load.image('platform', platform)
+this.load.image('background', background);
+this.load.image('platform', platform);
+this.load.image('player', player);
 }
 
 ready () {
