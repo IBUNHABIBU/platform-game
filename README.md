@@ -39,7 +39,7 @@ In this project I have built the platform game using phaser framework.
 
 - Player is the fish which eats small fish and being eaten by big fish.
 - A player is able to avoid the big fish.
-- It display the draw when the game is draw.
+- It shows the scores.
 
 
 ## [Live demo](https://ibunhabibgame.netlify.app/ "Of the project")
