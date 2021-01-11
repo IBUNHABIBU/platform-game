@@ -37,7 +37,7 @@ In this project I have built the platform game using phaser framework.
 
 ### Features
 
-- User can play with computer player.
+- Player is the fish which eats small fish and being eaten by big fish.
 - It display the winning message.
 - It display the draw when the game is draw.
 
