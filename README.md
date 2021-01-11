@@ -33,7 +33,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-In this project, I have build a Tic Tac Toe game. The project follows the lesson about Factory Functions and The Module Pattern so the main goal is to put into practice those concepts along with the main concepts of Object Oriented Programming. Particularly, classes/objects, testing and how to access their methods and attributes.
+In this project I have built the platform game using phaser framework.
 
 ### Features
 
