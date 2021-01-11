@@ -41,8 +41,7 @@ export default class GameScene extends Phaser.Scene{
     }
     else if (cursors.right.isDown)
     {
-        fish.setVelocityX(300);
-
+        
         fish.anims.play('right', true);
     }
     else
