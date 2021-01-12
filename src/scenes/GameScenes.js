@@ -1,7 +1,5 @@
 import 'phaser';
 
-var cursors;
-var fish;
 export default class GameScene extends Phaser.Scene{
   constructor(){
     super('Game');
@@ -11,8 +9,6 @@ export default class GameScene extends Phaser.Scene{
     cursors = this.input.keyboard.createCursorKeys();
   }
    makePlayer(x,y) {
-     
-    // this.player = this.add.image(480,283,'player');
     const fish = this.add.sprite(x, y, 'spriteFish');
     return fish;
    }
