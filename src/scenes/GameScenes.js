@@ -6,31 +6,10 @@ export default class GameScene extends Phaser.Scene{
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
-    cursors = this.input.keyboard.createCursorKeys();
+    this.fish = this.add.image(138,283,'fishTile_089');
   }
-   makePlayer(x,y) {
-    const fish = this.add.sprite(x, y, 'spriteFish');
-    return fish;
-   }
+
   update(){
-    if (cursors.left.isDown)
-    {
-        fish.anims.play('left', true);
-    }
-    else if (cursors.right.isDown)
-    {
-    }
-    else
-    {
-        
-
-    }
-
-    if (cursors.up.isDown && fish.body.touching.down)
-    {
-         this.sound.play('jump');   
-        
-    }
    
   }
 }
