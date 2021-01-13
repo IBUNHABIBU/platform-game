@@ -16,11 +16,26 @@ export default class GameScene extends Phaser.Scene{
     this.player = this.add.sprite(40,this.sys.game.config.height/2,'player');
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height/2-80,this.sys.game.config.height/2,'treasure');
-    // this.treasure.setScale(0.5);
+    this.treasure.setScale(0.5);
+    this.enemy = this.add.group({
+      key: 'dragon',
+      setXY: {
+        x: 100,
+        y: 100,
+        stepX: 80,
+        stepY: 20
+      }
+    })
   }
   update(){
    if(this.input.activePointer.isDown){
      this.player.x += this.playerSpeed ;
    }
+   if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
+    this.gameOver();
+  }
+  }
+  gameOver(){
+    this.scene.restart();
   }
 }
