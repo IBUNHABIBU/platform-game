@@ -39,7 +39,10 @@ export default class GameScene extends Phaser.Scene{
   let enemies = this.enemies.getChildren();
   let num = enemies.length;
   for(let i = 0; i < num; i++){
-    
+    enemies[i].y = enemies[i].speed;
+    if(enemies[i].y>= this.enemyMaxY && enemies[i].speed > 0){
+      enemies[i].speed *= 1;
+    }
   }
   }
   gameOver(){
