@@ -17,6 +17,7 @@ import spriteFish from "../assets/images/fishSpritesheet.png";
 import spriteFish2 from "../assets/images/fishSpritesheet@2.png";
 import player from "../assets/images/player.png";
 import dragon from "../assets/images/dragon.png";
+import treasure from "../assets/images/treasure.png";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
