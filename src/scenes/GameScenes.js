@@ -4,6 +4,12 @@ export default class GameScene extends Phaser.Scene{
   constructor(){
     super('Game');
   }
+  init(){
+    this.playerSpeed = 1.5;
+    this.enemySpeed = 2;
+    this.enemyMaxY = 280;
+    this.ememyMinY = 80;
+  }
   create(){
     this.bg = this.add.image(240,320, 'background');
     this.fish = this.add.image(138,283,'fish');
@@ -12,7 +18,7 @@ export default class GameScene extends Phaser.Scene{
   }
   update(){
    if(this.input.activePointer.isDown){
-     this.player.x +=1 ;
+     this.player.x += this.playerSpeed ;
    }
   }
 }
