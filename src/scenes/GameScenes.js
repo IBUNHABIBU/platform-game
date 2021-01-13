@@ -33,15 +33,20 @@ export default class GameScene extends Phaser.Scene{
    if(this.input.activePointer.isDown){
      this.player.x += this.playerSpeed ;
    }
-   if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
-    this.gameOver();
-  }
+  //  if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
+  //   this.gameOver();
+  // }
   let enemies = this.enemies.getChildren();
   let num = enemies.length;
   for(let i = 0; i < num; i++){
+    console.log(enemies[i].speed)
     enemies[i].y = enemies[i].speed;
     if(enemies[i].y>= this.enemyMaxY && enemies[i].speed > 0){
-      enemies[i].speed *= 1;
+      enemies[i].speed *= -1;
+      console.log(enemies[i].speed)
+    } else if(enemies[i].y>= this.enemyMinY && enemies[i].speed < 0){
+      enemies[i].speed *= -1;
+      console.log("the second speed is",enemies[i].speed)
     }
   }
   }
