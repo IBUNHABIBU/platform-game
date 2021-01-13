@@ -13,7 +13,7 @@ export default class GameScene extends Phaser.Scene{
   create(){
     this.bg = this.add.image(240,320, 'background');
     // this.fish = this.add.image(138,3,'fish');
-    this.player = this.add.sprite(40,this.sys.game.config.height/2,'player');
+    this.player = this.add.sprite(40,this.sys.game.config.height/2,'fish');
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
     this.treasure.setScale(0.5);
@@ -21,12 +21,13 @@ export default class GameScene extends Phaser.Scene{
       key: 'food',
       repeat: 5,
       setXY: {
-        x: 100,
+        x: 800,
         y: 10,
         stepX: 80,
         stepY: 100
       }
     });
+    
     Phaser.Actions.ScaleXY(this.enemies.getChildren(), -0.5, -0.5);
     Phaser.Actions.Call(this.enemies.getChildren(), function (enemy) {
       enemy.speed = Math.random() * 2 + 1;
@@ -41,6 +42,22 @@ export default class GameScene extends Phaser.Scene{
    if(this.input.activePointer.isDown){
      this.player.x += this.playerSpeed ;
    }
+   let up = this.input.keyboard.addKey('UP');
+   let down = this.input.keyboard.addKey('DOWN');
+   let left = this.input.keyboard.addKey('LEFT');
+   let right = this.input.keyboard.addKey('RIGHT');
+   if(up.isDown){
+    this.player.y += this.playerSpeed ;
+   }
+   if(down.isDown){
+    this.player.y -= this.playerSpeed ;
+   }
+   if(left.isDown){
+    this.player.x += this.playerSpeed ;
+   }
+   if(up.isDown){
+    this.player.x += this.playerSpeed ;
+   }
    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
     this.gameOver();
   }
@@ -52,12 +69,12 @@ export default class GameScene extends Phaser.Scene{
       enemies[i].speed *= -1;
     } 
     else if(enemies[i].x < this.enemyMinY && enemies[i].speed < 0){
-      enemies[i].speed *= -1;
+      console.log("hi");
     }
-    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
-      this.gameOver();
-      break;
-    }
+    // if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
+    //   this.gameOver();
+    //   break;
+    // }
   }
   }
   gameOver(){
