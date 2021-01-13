@@ -119,6 +119,8 @@ this.load.image('fish2', fish2);
 this.load.image('fish3', fish3);
 this.load.image('dragon', dragon);
 this.load.image('treasure', treasure);
+this.load.image('player', player);
+
 }
 
 ready () {
