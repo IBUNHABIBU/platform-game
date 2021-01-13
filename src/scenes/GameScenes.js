@@ -47,15 +47,15 @@ export default class GameScene extends Phaser.Scene{
    let left = this.input.keyboard.addKey('LEFT');
    let right = this.input.keyboard.addKey('RIGHT');
    if(up.isDown){
-    this.player.y += this.playerSpeed ;
-   }
-   if(down.isDown){
     this.player.y -= this.playerSpeed ;
    }
-   if(left.isDown){
-    this.player.x += this.playerSpeed ;
+   if(down.isDown){
+    this.player.y += this.playerSpeed ;
    }
-   if(up.isDown){
+   if(left.isDown){
+    this.player.x -= this.playerSpeed ;
+   }
+   if(right.isDown){
     this.player.x += this.playerSpeed ;
    }
    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
