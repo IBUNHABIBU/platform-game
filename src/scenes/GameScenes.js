@@ -7,12 +7,12 @@ export default class GameScene extends Phaser.Scene{
   init(){
     this.playerSpeed = 1.5;
     this.enemySpeed = 2;
-    this.enemyMaxY = 280;
-    this.ememyMinY = 80;
+    this.enemyMaxY = 680;
+    this.ememyMinY = 3;
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
-    this.fish = this.add.image(138,283,'fish');
+    this.fish = this.add.image(138,3,'fish');
     this.player = this.add.sprite(40,this.sys.game.config.height/2,'player');
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height/2-80,this.sys.game.config.height/2,'treasure');
@@ -44,11 +44,16 @@ export default class GameScene extends Phaser.Scene{
   for(let i = 0; i < num; i++){
     enemies[i].y += enemies[i].speed;
     if(enemies[i].y>= this.enemyMaxY && enemies[i].speed > 0){
+      console.log("max");
       enemies[i].speed *= -1;
-    } else if(enemies[i].y>= this.enemyMinY && enemies[i].speed < 0){
+    } else if(enemies[i].y <= this.enemyMinY && enemies[i].speed < 0){
+      console.log("found");
       enemies[i].speed *= -1;
     }
-    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds()))
+    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
+      this.gameOver();
+      break;
+    }
   }
   }
   gameOver(){
