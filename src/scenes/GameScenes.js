@@ -8,7 +8,7 @@ export default class GameScene extends Phaser.Scene{
     this.playerSpeed = 1.5;
     this.enemySpeed = 2;
     this.enemyMaxY = 680;
-    this.ememyMinY = 3;
+    this.enemyMinY = 3;
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
@@ -43,16 +43,11 @@ export default class GameScene extends Phaser.Scene{
   let num = enemies.length;
   for(let i = 0; i < num; i++){
     enemies[i].y += enemies[i].speed;
-    if(enemies[i].y>= this.enemyMaxY && enemies[i].speed > 0){
-      console.log("max");
+    if (enemies[i].y >= this.enemyMaxY && enemies[i].speed > 0) {
       enemies[i].speed *= -1;
-    } else if(enemies[i].y <= this.enemyMinY && enemies[i].speed < 0){
-      console.log("found");
+    } 
+    else if(enemies[i].y < this.enemyMinY && enemies[i].speed < 0){
       enemies[i].speed *= -1;
-    }
-    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
-      this.gameOver();
-      break;
     }
   }
   }
