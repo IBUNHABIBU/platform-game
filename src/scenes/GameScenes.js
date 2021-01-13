@@ -15,7 +15,7 @@ export default class GameScene extends Phaser.Scene{
     this.fish = this.add.image(138,3,'fish');
     this.player = this.add.sprite(40,this.sys.game.config.height/2,'player');
     this.player.setScale(0.5);
-    this.treasure = this.add.sprite(this.sys.game.config.height/2-80,this.sys.game.config.height/2,'treasure');
+    this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
     this.treasure.setScale(0.5);
     this.enemies = this.add.group({
       key: 'dragon',
@@ -49,9 +49,16 @@ export default class GameScene extends Phaser.Scene{
     else if(enemies[i].y < this.enemyMinY && enemies[i].speed < 0){
       enemies[i].speed *= -1;
     }
+    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
+      this.gameOver();
+      break;
+    }
   }
   }
   gameOver(){
-    this.scene.restart();
+    this.cameras.main.shake(500);
+    this.time.delayedCall(500, function () {
+      this.scene.restart();
+    },[], this)
   }
 }
