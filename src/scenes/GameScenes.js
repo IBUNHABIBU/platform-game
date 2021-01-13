@@ -17,7 +17,7 @@ export default class GameScene extends Phaser.Scene{
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height/2-80,this.sys.game.config.height/2,'treasure');
     this.treasure.setScale(0.5);
-    this.enemy = this.add.group({
+    this.enemies = this.add.group({
       key: 'dragon',
       repeat: 5,
       setXY: {
@@ -27,7 +27,7 @@ export default class GameScene extends Phaser.Scene{
         stepY: 20
       }
     });
-    Phaser.Actions.ScaleXY(this.enemy.getChildren(), -0.5, -0.5);
+    Phaser.Actions.ScaleXY(this.enemies.getChildren(), -0.5, -0.5);
   }
   update(){
    if(this.input.activePointer.isDown){
@@ -35,6 +35,11 @@ export default class GameScene extends Phaser.Scene{
    }
    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
     this.gameOver();
+  }
+  let enemies = this.enemies.getChildren();
+  let num = enemies.length;
+  for(let i = 0; i < num; i++){
+    
   }
   }
   gameOver(){
