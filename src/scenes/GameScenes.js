@@ -19,13 +19,15 @@ export default class GameScene extends Phaser.Scene{
     this.treasure.setScale(0.5);
     this.enemy = this.add.group({
       key: 'dragon',
+      repeat: 5,
       setXY: {
         x: 100,
         y: 100,
         stepX: 80,
         stepY: 20
       }
-    })
+    });
+    Phaser.Actions.ScaleXY(this.enemy.getChildren(), -0.5, -0.5);
   }
   update(){
    if(this.input.activePointer.isDown){
