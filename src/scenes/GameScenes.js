@@ -74,6 +74,7 @@ export default class GameScene extends Phaser.Scene{
   
   let enemies = this.enemies.getChildren();
   let num = enemies.length;
+  this.model = this.sys.game.globals.model;
   for(let i = 0; i < num; i++){
     enemies[i].flipX = true;
     enemies[i].x += enemies[i].speed;
@@ -86,6 +87,8 @@ export default class GameScene extends Phaser.Scene{
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
       this.scoreCredit  += 1;
       enemies[i].x = this.sys.game.config.width;
+      this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
+      this.foodSound.play();
     }
   }
   }
