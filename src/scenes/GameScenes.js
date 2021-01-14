@@ -9,6 +9,7 @@ export default class GameScene extends Phaser.Scene{
     this.enemySpeed = 2;
     this.enemyMaxX = 680;
     this.enemyMinX = 3;
+    this.scoreCredit = 0;
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
@@ -16,6 +17,7 @@ export default class GameScene extends Phaser.Scene{
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
     this.treasure.setScale(0.5);
+    this.score = this.add.text(30,30, 'Scrore : '+ this.scoreCredit);
     this.enemies = this.add.group({
       key: 'food',
       repeat: 5,
