@@ -12,9 +12,6 @@ import food from "../assets/images/fishTile_075.png";
 import fish5 from "../assets/images/fishTile_076.png";
 import fish from "../assets/images/fishTile_077.png";
 import background from "../assets/images/bg_layer1.png";
-import player from "../assets/images/player.png";
-import dragon from "../assets/images/dragon.png";
-import treasure from "../assets/images/treasure.png";
 import logo from "../assets/images/logo.jpg";
 
 export default class PreloaderScene extends Phaser.Scene{
@@ -117,9 +114,6 @@ this.load.image('food', food);
 this.load.image('fish5', fish5);
 this.load.image('fish2', fish2);
 this.load.image('fish3', fish3);
-this.load.image('dragon', dragon);
-this.load.image('treasure', treasure);
-this.load.image('player', player);
 
 }
 
