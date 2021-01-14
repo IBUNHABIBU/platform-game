@@ -42,7 +42,7 @@ In this project I have built the platform game using phaser framework.
 - It shows the scores.
 
 
-## [Live demo](https://ibunhabibgame.netlify.app/ "Of the project")
+## [Live demo](https://ibunhabibphasergame.netlify.app/ "Of the project")
 <br/>
 <div align="center">
 
