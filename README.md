@@ -46,7 +46,7 @@ In this project I have built the platform game using phaser framework.
 <br/>
 <div align="center">
 
-<img  src="https://github.com/IBUNHABIBU/tic-tac-toe-game/blob/feature/src/Images/4e6rgj.gif" />
+<img  src="https://github.com/IBUNHABIBU/platform-game/blob/feature/src/assets/images/phasergame.gif" />
 </div>
 
 <!-- BUILD WITH -->
