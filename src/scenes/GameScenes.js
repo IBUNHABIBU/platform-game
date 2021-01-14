@@ -5,8 +5,8 @@ export default class GameScene extends Phaser.Scene{
     super('Game');
   }
   init(){
-    this.playerSpeed = 1.5;
-    this.enemySpeed = 2;
+    this.playerSpeed = 21.5;
+    this.enemySpeed = 22;
     this.enemyMaxX = 680;
     this.enemyMinX = 3;
     this.scoreCredit = 0;
@@ -17,7 +17,7 @@ export default class GameScene extends Phaser.Scene{
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
     this.treasure.setScale(0.5);
-    this.score = this.add.text(30,30, 'Scrore : '+ this.scoreCredit);
+   
     this.enemies = this.add.group({
       key: 'food',
       repeat: 5,
@@ -37,6 +37,23 @@ export default class GameScene extends Phaser.Scene{
     this.cameras.main.resetFX();
   }
   update(){
+    this.score = this.add.text(30,30, 'Score : '+ this.scoreCredit, {
+      fontFamily: 'Courier',
+      fontSize: '32px',
+      fontStyle: '',
+      backgroundColor: '#a8a866',
+      color: '#fff',
+      stroke: '#fff',
+      strokeThickness: 0,
+      shadow: {
+        offsetX: 0,
+        offsetY: 0,
+        color: '#000',
+        blur: 0,
+        stroke: false,
+        fill: false
+      }
+     });
     if(!this.playerLife){
       return;
     }
@@ -71,6 +88,10 @@ export default class GameScene extends Phaser.Scene{
       enemies[i].speed *= -1;
       } 
     else if(enemies[i].x < this.enemyMinX && enemies[i].speed < 0){
+      enemies[i].x = this.sys.game.config.width;
+    }
+    if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
+      this.scoreCredit  += 1;
       enemies[i].x = this.sys.game.config.width;
     }
     // if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
