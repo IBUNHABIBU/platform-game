@@ -1,7 +1,6 @@
 import 'phaser';
 import blueButton2 from "../assets/ui/blue_button02.png";
 import blueButton3 from "../assets/ui/blue_button03.png";
-import logo from "../assets/logo.png";
 import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
@@ -16,6 +15,7 @@ import background from "../assets/images/bg_layer1.png";
 import player from "../assets/images/player.png";
 import dragon from "../assets/images/dragon.png";
 import treasure from "../assets/images/treasure.png";
+import logo from "../assets/images/logo.jpg";
 
 export default class PreloaderScene extends Phaser.Scene{
   constructor () {
