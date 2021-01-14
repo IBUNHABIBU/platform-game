@@ -93,8 +93,9 @@ Enjoy playing it.
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
 ### How to play
-- Click on the box to put mark "X" untill you game over.
-- The human will mark X while the computer will mark O.
+- Use arrow keys to navigate left, right , up and down.
+- Eat all the small fish and get rid of big fish otherwise the big fish wil eats you and game over.
+- Give a shock to a big fish to kill it.
 <!-- CONTACT -->
 ## Authors
 
