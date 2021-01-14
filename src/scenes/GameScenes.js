@@ -12,8 +12,6 @@ export default class GameScene extends Phaser.Scene{
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
-    
-    // this.fish = this.add.image(138,3,'fish');
     this.player = this.add.sprite(40,this.sys.game.config.height/2,'fish');
     this.player.setScale(0.5);
     this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
@@ -65,12 +63,13 @@ export default class GameScene extends Phaser.Scene{
   let enemies = this.enemies.getChildren();
   let num = enemies.length;
   for(let i = 0; i < num; i++){
+    enemies[i].flipX = true;
     enemies[i].x += enemies[i].speed;
     if (enemies[i].x >= this.enemyMaxX && enemies[i].speed > 0) {
       enemies[i].speed *= -1;
-    } 
-    else if(enemies[i].x < this.enemyMinY && enemies[i].speed < 0){
-      console.log("hi");
+      } 
+    else if(enemies[i].x < this.enemyMinX && enemies[i].speed < 0){
+      enemies[i].x = this.sys.game.config.width;
     }
     // if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
     //   this.gameOver();
