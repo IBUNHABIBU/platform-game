@@ -64,6 +64,7 @@ export default class GameScene extends Phaser.Scene{
   let num = enemies.length;
   for(let i = 0; i < num; i++){
     enemies[i].flipX = true;
+    console.log(enemies[i].length)
     enemies[i].x += enemies[i].speed;
     if (enemies[i].x >= this.enemyMaxX && enemies[i].speed > 0) {
       enemies[i].speed *= -1;
