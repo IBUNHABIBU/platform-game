@@ -66,10 +66,12 @@ export default class GameScene extends Phaser.Scene{
     this.player.y += this.playerSpeed ;
    }
    if(left.isDown){
-    this.player.x -= this.playerSpeed ;
+    this.player.x -= this.playerSpeed;
+    this.player.flipX = true;
    }
    if(right.isDown){
     this.player.x += this.playerSpeed ;
+    this.player.flipX = false;
    }
   
   let enemies = this.enemies.getChildren();
