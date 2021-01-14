@@ -15,8 +15,6 @@ export default class GameScene extends Phaser.Scene{
     this.bg = this.add.image(240,320, 'background');
     this.player = this.add.sprite(40,this.sys.game.config.height/2,'fish');
     this.player.setScale(0.5);
-    this.treasure = this.add.sprite(this.sys.game.config.height-80,this.sys.game.config.height/2,'treasure');
-    this.treasure.setScale(0.5);
    
     this.enemies = this.add.group({
       key: 'food',
@@ -57,9 +55,6 @@ export default class GameScene extends Phaser.Scene{
     if(!this.playerLife){
       return;
     }
-   if(this.input.activePointer.isDown){
-     this.player.x += this.playerSpeed ;
-   }
    let up = this.input.keyboard.addKey('UP');
    let down = this.input.keyboard.addKey('DOWN');
    let left = this.input.keyboard.addKey('LEFT');
@@ -76,9 +71,7 @@ export default class GameScene extends Phaser.Scene{
    if(right.isDown){
     this.player.x += this.playerSpeed ;
    }
-   if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),this.treasure.getBounds())){
-    this.gameOver();
-  }
+  
   let enemies = this.enemies.getChildren();
   let num = enemies.length;
   for(let i = 0; i < num; i++){
@@ -94,10 +87,6 @@ export default class GameScene extends Phaser.Scene{
       this.scoreCredit  += 1;
       enemies[i].x = this.sys.game.config.width;
     }
-    // if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
-    //   this.gameOver();
-    //   break;
-    // }
   }
   }
   gameOver(){

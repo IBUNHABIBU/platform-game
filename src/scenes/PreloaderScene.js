@@ -4,7 +4,6 @@ import blueButton3 from "../assets/ui/blue_button03.png";
 import box from "../assets/ui/grey_box.png";
 import blueBoxCheckMark from "../assets/ui/blue_boxCheckmark.png";
 import bgMusic from "../assets/audio/TownTheme.mp3";
-
 import platform from "../assets/images/ground_grass.png";
 import fish2 from "../assets/images/fishTile_073.png";
 import fish3 from "../assets/images/fishTile_074.png";
