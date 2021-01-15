@@ -14,8 +14,8 @@
   <h3 align="center"> This project is part of the Microverse curriculum in JavaScript module to design a platfom game using phaser library and test driven development</h3>
 
   <p align="center">
-    <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Report Bug</a>
-    <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Request Feature</a>
+    <a href="https://github.com/IBUNHABIBU/platform-game/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/platform-game/issues">Request Feature</a>
   </p>
 </p>
 
