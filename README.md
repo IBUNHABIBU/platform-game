@@ -15,7 +15,6 @@
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Report Bug</a>
-    · 
     <a href="https://github.com/IBUNHABIBU/tic-tac-toe-game/issues">Request Feature</a>
   </p>
 </p>
