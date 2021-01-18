@@ -87,9 +87,28 @@ export default class GameScene extends Phaser.Scene{
       enemies[i].speed *= -1;
       } 
     else if(enemies[i].x < this.enemyMinX && enemies[i].speed < 0){
-      enemies[i].x = this.sys.game.config.width;
-      // this.warningText = this.text.add(this.width/2,this.height/2, "Warning" + this.count + "remained")
-      // this.count--;
+      this.warningText = this.add.text(this.width/2,this.height/2, 'You missed food : '+ this.count +" remained", {
+        fontFamily: 'Courier',
+        fontSize: '32px',
+        fontStyle: '',
+        backgroundColor: '#a8a866',
+        color: '#fff',
+        stroke: '#fff',
+        strokeThickness: 0,
+        shadow: {
+          offsetX: 0,
+          offsetY: 0,
+          color: '#000',
+          blur: 0,
+          stroke: false,
+          fill: false
+        }
+       });
+     enemies[i].x = this.sys.game.config.width;
+     this.count --;
+    }
+    if(this.count <= 0){
+      this.playerLife = false;
     }
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
       this.scoreCredit  += 1;
