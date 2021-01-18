@@ -10,6 +10,9 @@ export default class GameScene extends Phaser.Scene{
     this.enemyMaxX = 680;
     this.enemyMinX = 3;
     this.scoreCredit = 0;
+    this.count = 3;
+    this.width = this.sys.game.config.width;
+    this.height = this.sys.game.config.height;
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
@@ -85,6 +88,8 @@ export default class GameScene extends Phaser.Scene{
       } 
     else if(enemies[i].x < this.enemyMinX && enemies[i].speed < 0){
       enemies[i].x = this.sys.game.config.width;
+      // this.warningText = this.text.add(this.width/2,this.height/2, "Warning" + this.count + "remained")
+      // this.count--;
     }
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
       this.scoreCredit  += 1;
