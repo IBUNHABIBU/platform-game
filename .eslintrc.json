@@ -10,8 +10,6 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["decorator-position"],
     "rules": {
-      "decorator-position/decorator-position": "error"
     }
 }
