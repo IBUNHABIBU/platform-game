@@ -7,9 +7,11 @@
         "airbnb-base"
     ],
     "parserOptions": {
-        "ecmaVersion": 2021,
+        "ecmaVersion": 12,
         "sourceType": "module"
     },
+    "plugins": ["decorator-position"],
     "rules": {
+      "decorator-position/decorator-position": "error"
     }
 }
