@@ -52,9 +52,7 @@ In this project I have built the platform game using phaser framework.
 ## Built With
 
 This project was built using these technologies.
-* HTML
-* CSS
-* JavaScript
+* Phaser 3
 * Jest
 
 ### Requirement
