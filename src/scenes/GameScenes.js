@@ -13,6 +13,7 @@ export default class GameScene extends Phaser.Scene{
     this.count = 3;
     this.width = this.sys.game.config.width;
     this.height = this.sys.game.config.height;
+    this.score = 0;
   }
   create(){
     this.bg = this.add.image(240,320, 'background');
@@ -38,27 +39,9 @@ export default class GameScene extends Phaser.Scene{
     this.cameras.main.resetFX();
   }
   update(){
-    this.score = this.add.text(30,30, 'Score : '+ this.scoreCredit, {
-      fontFamily: 'Courier',
-      fontSize: '32px',
-      fontStyle: '',
-      backgroundColor: '#a8a866',
-      color: '#fff',
-      stroke: '#fff',
-      strokeThickness: 0,
-      shadow: {
-        offsetX: 0,
-        offsetY: 0,
-        color: '#000',
-        blur: 0,
-        stroke: false,
-        fill: false
-      }
-     });
+    this.displayMessage(30,30,"Score:"+this.score);
     if(this.count <= 0){
-      // console.log("wao");
       this.gameOver();
-    
     }
     if(!this.playerLife){
       return;
@@ -107,14 +90,15 @@ export default class GameScene extends Phaser.Scene{
   }
   gameOver(){
     this.playerLife = false;
-    this.cameras.main.shake(500);
-    this.time.delayedCall(250, function () {
+    /
       this.displayMessage(this.width/2,this.height/2,"gave over");
-      this.cameras.main.fade(250);
-    },[], this)
-    this.time.delayedCall(500, function () {
+      this.resetButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
+      this.resetText = this.add.text(0, 0, 'Play Again', { fontSize: '32px', fill: '#fff' });
+Phaser.Display.Align.In.Center(this.resetText, this.resetButton);
+    
+    this.resetButton.on('pointerdown', function (pointer) {
       this.scene.restart();
-    },[], this)
+    }.bind(this));
   }
   displayMessage(x,y,z){
     this.warningText = this.add.text(x,y,z, {
