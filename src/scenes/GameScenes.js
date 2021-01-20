@@ -55,6 +55,11 @@ export default class GameScene extends Phaser.Scene{
         fill: false
       }
      });
+    if(this.count <= 0){
+      // console.log("wao");
+      this.gameOver();
+    
+    }
     if(!this.playerLife){
       return;
     }
@@ -107,9 +112,7 @@ export default class GameScene extends Phaser.Scene{
      enemies[i].x = this.sys.game.config.width;
      this.count --;
     }
-    if(this.count <= 0){
-      this.playerLife = false;
-    }
+    
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
       this.scoreCredit  += 1;
       enemies[i].x = this.sys.game.config.width;
@@ -122,6 +125,7 @@ export default class GameScene extends Phaser.Scene{
     this.playerLife = false;
     this.cameras.main.shake(500);
     this.time.delayedCall(250, function () {
+      this.text.add(40,40,"Game Over");
       this.cameras.main.fade(250);
     },[], this)
     this.time.delayedCall(500, function () {
