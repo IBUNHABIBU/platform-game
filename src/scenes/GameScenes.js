@@ -81,7 +81,7 @@ export default class GameScene extends Phaser.Scene{
     }
     
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
-      this.scoreCredit  += 1;
+      this.score  += 1;
       enemies[i].x = this.sys.game.config.width;
       this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
       this.foodSound.play();
@@ -90,10 +90,10 @@ export default class GameScene extends Phaser.Scene{
   }
   gameOver(){
     this.playerLife = false;
-      this.displayMessage(this.width/2,this.height/2,"gave over");
-      this.resetButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
+      this.d = this.displayMessage(this.width/2.8,this.height/3.2,"gave over");
+      this.resetButton = this.add.sprite(this.width/2,this.height/2, 'blueButton2').setInteractive();
       this.resetText = this.add.text(0, 0, 'Play Again', { fontSize: '32px', fill: '#fff' });
-Phaser.Display.Align.In.Center(this.resetText, this.resetButton);
+      Phaser.Display.Align.In.Center(this.resetText, this.resetButton);
     
     this.resetButton.on('pointerdown', function (pointer) {
       this.scene.restart();
