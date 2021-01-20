@@ -6,10 +6,9 @@ export default class GameScene extends Phaser.Scene{
   }
   init(){
     this.playerSpeed = 21.5;
-    this.enemySpeed = 22;
+    //this.enemySpeed = 52;
     this.enemyMaxX = 680;
     this.enemyMinX = 3;
-    this.scoreCredit = 0;
     this.count = 3;
     this.width = this.sys.game.config.width;
     this.height = this.sys.game.config.height;
@@ -33,7 +32,7 @@ export default class GameScene extends Phaser.Scene{
     
     Phaser.Actions.ScaleXY(this.enemies.getChildren(), -0.5, -0.5);
     Phaser.Actions.Call(this.enemies.getChildren(), function (enemy) {
-      enemy.speed = Math.random() * 2 + 1;
+      enemy.speed = Math.random() * 2 + 3;
     }, this);
     this.playerLife = true;
     this.cameras.main.resetFX();
@@ -89,10 +88,10 @@ export default class GameScene extends Phaser.Scene{
   }
   }
   gameOver(){
-    this.playerLife = false;
-      this.d = this.displayMessage(this.width/2.8,this.height/3.2,"gave over");
+      this.playerLife = false;
       this.resetButton = this.add.sprite(this.width/2,this.height/2, 'blueButton2').setInteractive();
-      this.resetText = this.add.text(0, 0, 'Play Again', { fontSize: '32px', fill: '#fff' });
+      this.resetButton.setScale(2.4);
+      this.resetText = this.add.text(0, 0, 'Game Over ! Play Again', { fontSize: '32px', fill: '#fff' });
       Phaser.Display.Align.In.Center(this.resetText, this.resetButton);
     
     this.resetButton.on('pointerdown', function (pointer) {
