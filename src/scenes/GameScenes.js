@@ -92,23 +92,7 @@ export default class GameScene extends Phaser.Scene{
       enemies[i].speed *= -1;
       } 
     else if(enemies[i].x < this.enemyMinX && enemies[i].speed < 0){
-      this.warningText = this.add.text(this.width/2,this.height/2, 'You missed food : '+ this.count +" remained", {
-        fontFamily: 'Courier',
-        fontSize: '32px',
-        fontStyle: '',
-        backgroundColor: '#a8a866',
-        color: '#fff',
-        stroke: '#fff',
-        strokeThickness: 0,
-        shadow: {
-          offsetX: 0,
-          offsetY: 0,
-          color: '#000',
-          blur: 0,
-          stroke: false,
-          fill: false
-        }
-       });
+     this.displayMessage(this.width/2,this.height/2, this.count + "remained")
      enemies[i].x = this.sys.game.config.width;
      this.count --;
     }
@@ -125,11 +109,30 @@ export default class GameScene extends Phaser.Scene{
     this.playerLife = false;
     this.cameras.main.shake(500);
     this.time.delayedCall(250, function () {
-      this.text.add(40,40,"Game Over");
+      this.displayMessage(this.width/2,this.height/2,"gave over");
       this.cameras.main.fade(250);
     },[], this)
     this.time.delayedCall(500, function () {
       this.scene.restart();
     },[], this)
+  }
+  displayMessage(x,y,z){
+    this.warningText = this.add.text(x,y,z, {
+      fontFamily: 'Courier',
+      fontSize: '32px',
+      fontStyle: '',
+      backgroundColor: '#a8a866',
+      color: '#fff',
+      stroke: '#fff',
+      strokeThickness: 0,
+      shadow: {
+        offsetX: 0,
+        offsetY: 0,
+        color: '#000',
+        blur: 0,
+        stroke: false,
+        fill: false
+      }
+     });
   }
 }
