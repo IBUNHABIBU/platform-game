@@ -90,7 +90,6 @@ export default class GameScene extends Phaser.Scene{
   }
   gameOver(){
     this.playerLife = false;
-    /
       this.displayMessage(this.width/2,this.height/2,"gave over");
       this.resetButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
       this.resetText = this.add.text(0, 0, 'Play Again', { fontSize: '32px', fill: '#fff' });
