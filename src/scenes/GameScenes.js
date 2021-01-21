@@ -30,6 +30,8 @@ export default class GameScene extends Phaser.Scene{
       }
     });
     
+    
+
     Phaser.Actions.ScaleXY(this.enemies.getChildren(), -0.5, -0.5);
     Phaser.Actions.Call(this.enemies.getChildren(), function (enemy) {
       enemy.speed = Math.random() * 2 + 3;
@@ -68,6 +70,7 @@ export default class GameScene extends Phaser.Scene{
   let num = enemies.length;
   this.model = this.sys.game.globals.model;
   for(let i = 0; i < num; i++){
+    // enemies[i].setScale(Math.random() + 1);
     enemies[i].flipX = true;
     enemies[i].x += enemies[i].speed;
     if (enemies[i].x >= this.enemyMaxX && enemies[i].speed > 0) {
