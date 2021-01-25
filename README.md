@@ -22,6 +22,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+* [Story](#story)
   * [Built With](#built-with)
   * [Features](#features)
   * [Requirements](#requirements)
@@ -31,8 +32,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+The objective of this project is to build a simple turn-based RPG game with a scoring system, using JavaScript ES6, Phaser 3 framework, and other modern technologies. See technologies used for more info. I had to design the story, the gameplay, the scenes, and the scoring system.
 
-In this project I have built the platform game using phaser framework.
+### Story
+The player is the monster fish who eats all the small fish and being eaten by the big fish. As a player its your job to hit all the small fish as food and to get rid of the big fish because it will it you  unless you apply shock. So the enemies are rondom fish with different sizes.
 
 ### Features
 
@@ -91,7 +94,7 @@ Enjoy playing it.
 
 ### How to play
 - Use arrow keys to navigate left, right , up and down.
-- Eat all the small fish and get rid of big fish otherwise the big fish wil eats you and game over.
+- Eat all the small fish and get rid of big fish otherwise the big fish wil eat you and game over.
 - Give a shock to a big fish to kill it.
 <!-- CONTACT -->
 

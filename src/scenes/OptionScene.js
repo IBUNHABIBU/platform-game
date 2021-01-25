@@ -41,7 +41,7 @@ this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
 Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
  
 this.menuButton.on('pointerdown', function (pointer) {
-  this.scene.start('Title');
+  this.scene.start('Name');
 }.bind(this));
 
 this.updateAudio();
