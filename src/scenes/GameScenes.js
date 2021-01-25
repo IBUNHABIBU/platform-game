@@ -109,6 +109,9 @@ export default class GameScene extends Phaser.Scene{
     this.resetButton.on('pointerdown', function (pointer) {
       this.scene.restart();
     }.bind(this));
+    this.gotoMenu.on('pointerdown', function (pointer) {
+      this.scene.start('Title');
+    }.bind(this));
   }
   displayMessage(x,y,z){
     this.warningText = this.add.text(x,y,z, {

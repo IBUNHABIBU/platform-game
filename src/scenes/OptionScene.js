@@ -25,24 +25,24 @@ export default class OptionsScene extends Phaser.Scene {
     this.soundButton.setInteractive();
  
     this.musicButton.on('pointerdown', function () {
-    this.model.musicOn = !this.model.musicOn;
-    this.updateAudio();
-}.bind(this));
+      this.model.musicOn = !this.model.musicOn;
+      this.updateAudio();
+    }.bind(this));
  
-this.soundButton.on('pointerdown', function () {
-  this.model.soundOn = !this.model.soundOn;
-  this.updateAudio();
-}.bind(this));
+    this.soundButton.on('pointerdown', function () {
+      this.model.soundOn = !this.model.soundOn;
+      this.updateAudio();
+    }.bind(this));
  
-this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
-this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
-Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
+     this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
+     this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
+     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
  
-this.menuButton.on('pointerdown', function (pointer) {
-  this.scene.start('Name');
-}.bind(this));
+     this.menuButton.on('pointerdown', function (pointer) {
+       this.scene.start('Name');
+     }.bind(this));
 
-this.updateAudio();
+     this.updateAudio();
   }
   updateAudio() {
     if (this.model.musicOn === false) {
