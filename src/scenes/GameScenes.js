@@ -92,11 +92,20 @@ export default class GameScene extends Phaser.Scene{
   }
   gameOver(){
       this.playerLife = false;
+      this.gameOverText = this.add.text(this.width/2.6,this.height/4.2, 'Game Over ' , {
+        fontSize:'40px',
+        fill: '#000000'
+      })
       this.resetButton = this.add.sprite(this.width/2,this.height/2, 'blueButton2').setInteractive();
-      this.resetButton.setScale(2.4);
-      this.resetText = this.add.text(0, 0, 'Game Over ! Play Again', { fontSize: '32px', fill: '#fff' });
+      this.resetButton.setScale(1.4);
+      this.resetText = this.add.text(0, 0, ' Play Again', { fontSize: '32px', fill: '#fff' });
       Phaser.Display.Align.In.Center(this.resetText, this.resetButton);
     
+      this.gotoMenu = this.add.sprite(this.width/2,this.height/1.66, 'blueButton2').setInteractive();
+      this.gotoMenu.setScale(1);
+      this.gotoMenuText = this.add.text(0, 0, ' Menu', { fontSize: '32px', fill: '#fff' });
+      Phaser.Display.Align.In.Center(this.gotoMenuText, this.gotoMenu);
+
     this.resetButton.on('pointerdown', function (pointer) {
       this.scene.restart();
     }.bind(this));

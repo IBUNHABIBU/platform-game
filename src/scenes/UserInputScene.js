@@ -12,11 +12,16 @@ export default class UserInput extends Phaser.Scene {
         fill: '#ffffff',
     })
     this.about = this.add.text( config.width / 16,
-      120,'your task is to eat all the small fish and to get rid of the big fish unless you give it a shock',{
+      120,'your task is to eat all the small fish and get rid of ',{
       fontSize: '20px',
         fill: '#ffffff',
     })
-    this.input = this.add.dom(config.width/2,config.height/3, 'input', 
+    this.add.text( config.width /8,
+      160,' the big fish unless you give it a shock',{
+      fontSize: '20px',
+        fill: '#ffffff',
+    })
+    this.input = this.add.dom(config.width/2,config.height/2.6, 'input', 
      'background-color: #fff; width: 250px; height: 30px; font: 16px Times New Roman',
     )
     
