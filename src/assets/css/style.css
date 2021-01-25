@@ -4,3 +4,10 @@ body {
 
 input {
 }
+
+button{
+}
+.user-input{
+  display: flex;
+  flex-direction: column;
+}

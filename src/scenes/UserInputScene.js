@@ -5,14 +5,24 @@ export default class UserInput extends Phaser.Scene {
   }
   create(){
     const div = document.createElement('div');
+    div.setAttribute('class','user-form');
     const input = document.createElement('input');
-    // input.name = 'nameField';
+    input.setAttribute('class','name');
     input.setAttribute('type', 'text');
     input.placeholder = 'Enter your name';
     div.appendChild(input);
     const element = this.add.dom(60,40,div);
-    // const t = this.add.text(50,50,"hello");
-    // element.addListener('click');
-  }
+    const button = document.createElement('input');
+    button.setAttribute('type','submit');
+    button.value = 'Play Game';
+    div.appendChild(button);
+    element.addListener('click');
 
+    element.on('click', (event) => {
+      if(event.target.type == 'submit') {
+        const name = document.querySelector('.name').value;
+        
+      }
+    })
+  }
 }
