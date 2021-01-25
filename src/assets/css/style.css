@@ -7,7 +7,7 @@ input {
 
 button{
 }
-.user-input{
+.user-form{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }

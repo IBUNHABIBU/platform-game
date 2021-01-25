@@ -118,10 +118,10 @@ this.load.image('fish3', fish3);
 }
 
 ready () {
-  this.scene.start('Title');
+  this.scene.start('Name');
   this.readyCount++;
   if (this.readyCount === 2) {
-    this.scene.start('Title');
+    this.scene.start('Name');
   }
 }
 }
