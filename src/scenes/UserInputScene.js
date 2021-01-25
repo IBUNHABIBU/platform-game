@@ -21,7 +21,9 @@ export default class UserInput extends Phaser.Scene {
     element.on('click', (event) => {
       if(event.target.type == 'submit') {
         const name = document.querySelector('.name').value;
-        
+        this.model = this.sys.game.globals.model;
+        this.model = name;
+        this.scene.start('Options');
       }
     })
   }
