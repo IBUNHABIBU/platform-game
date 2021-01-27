@@ -29,12 +29,15 @@ export default class GameScene extends Phaser.Scene{
         stepY: 100
       }
     });
-    
+    let enemis = this.enemies.getChildren();
+    enemis.forEach( enemy => {
+      enemy.setScale(Math.random(0,1)+1);
+    })
     
 
     Phaser.Actions.ScaleXY(this.enemies.getChildren(), -0.5, -0.5);
     Phaser.Actions.Call(this.enemies.getChildren(), function (enemy) {
-      enemy.speed = Math.random() * 2 + 3;
+      enemy.speed = Math.random() * 2 + 2;
     }, this);
     this.playerLife = true;
     this.cameras.main.resetFX();
@@ -84,9 +87,11 @@ export default class GameScene extends Phaser.Scene{
     
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
       this.score  += 1;
+     console.log(enemies[i].width);
       enemies[i].x = this.sys.game.config.width;
       this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
       this.foodSound.play();
+      
     }
   }
   }
