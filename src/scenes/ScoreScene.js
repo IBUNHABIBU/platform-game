@@ -7,10 +7,14 @@ export default class ScoreScene extends Phaser.Scene{
  
   create () {
     this.heading = this.add.text(40,40, 
-      "TOP TEN SCORES",{
+      "TOP 5 SCORES",{
         fontSize: '40px',
           fill: '#ffffff',
     })
     API.getScores()
+    .then(data => {
+      console.log(data.result);
+      
+    }).catch(error => console.log("error"));
   }
 };
