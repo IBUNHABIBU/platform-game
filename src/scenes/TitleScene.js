@@ -26,13 +26,15 @@ export default class TitleScene extends Phaser.Scene {
     this.input.on('pointerout', function (event, gameObjects) {
       gameObjects[0].setTexture('blueButton2');
     });
-    this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
-    this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
-    Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
+    
+    this.scoreButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
+    this.scoreText = this.add.text(0, 0, 'TopScores', { fontSize: '32px', fill: '#fff' });
+    Phaser.Display.Align.In.Center(this.scoreText, this.scoreButton);
  
-    this.menuButton.on('pointerdown', function (pointer) {
-      this.scene.start('Title');
+    this.scoreButton.on('pointerdown', function (pointer) {
+      this.scene.start('Scores');
     }.bind(this));
+
 
     this.optionsButton = this.add.sprite(300, 200, 'blueButton2').setInteractive();
     this.centerButton(this.optionsButton);

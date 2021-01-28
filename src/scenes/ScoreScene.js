@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import API from '../util/api'
 export default class ScoreScene extends Phaser.Scene{
   constructor(){
-    super('Score');
+    super('Scores');
   }
  
   create () {
