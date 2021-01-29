@@ -7,7 +7,6 @@ export default class GameScene extends Phaser.Scene{
   }
   init(){
     this.playerSpeed = 21.5;
-    //this.enemySpeed = 52;
     this.enemyMaxX = 680;
     this.enemyMinX = 3;
     this.count = 3;
