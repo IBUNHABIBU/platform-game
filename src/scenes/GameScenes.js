@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import API from '../util/api';
 
 export default class GameScene extends Phaser.Scene{
   constructor(){
@@ -86,8 +87,7 @@ export default class GameScene extends Phaser.Scene{
     }
     
     if(Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),enemies[i].getBounds())){
-      this.score  += 1;
-     console.log(enemies[i].width);
+      this.score  += 15;
       enemies[i].x = this.sys.game.config.width;
       this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
       this.foodSound.play();
@@ -97,6 +97,9 @@ export default class GameScene extends Phaser.Scene{
   }
   gameOver(){
       this.playerLife = false;
+      this.playerName = this.sys.game.globals.playerName;
+      console.log(this.playerName)
+      API.addScore(this.playerName,this.score)
       this.gameOverText = this.add.text(this.width/2.6,this.height/4.2, 'Game Over ' , {
         fontSize:'40px',
         fill: '#000000'

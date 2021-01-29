@@ -37,8 +37,20 @@ export default class UserInput extends Phaser.Scene {
     button.addEventListener('click', (event) => {
       if(event.target.type == 'submit') {
         const name = document.querySelector('input').value;
+        if (name.length < 1) {
+          this.add.text(
+            config.width / 4,
+            253,
+            'Name should be over 3 characters!',
+            {
+              fontSize: '20px',
+              fill: '#ff0000',
+            },
+          );
+        } else {
         this.sys.game.globals.playerName = name;
         this.scene.start('Title');
+        }
       }
     })
   }
