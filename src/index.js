@@ -1,13 +1,13 @@
 import 'phaser';
-import config from './Config/config';
-import GameScene from './Scenes/GameScenes';
-import BootScenes from './Scenes/BootScenes';
-import PreloaderScene from './Scenes/PreloaderScene';
-import TitleScene from './Scenes/TitleScene';
-import OptionsScene from './Scenes/OptionScene';
-import CreditsScene from './Scenes/CreditScene';
-import UserInputScene from './Scenes/UserInputScene';
-import ScoreScene from './Scenes/ScoreScene';
+import config from './config/config';
+import GameScene from './scenes/GameScenes';
+import BootScenes from './scenes/BootScenes';
+import PreloaderScene from './scenes/PreloaderScene';
+import TitleScene from './scenes/TitleScene';
+import OptionsScene from './scenes/OptionScene';
+import CreditsScene from './scenes/CreditScene';
+import UserInputScene from './scenes/UserInputScene';
+import ScoreScene from './scenes/ScoreScene';
 import Model from './Model';
 class Game extends Phaser.Game {
   constructor () {
