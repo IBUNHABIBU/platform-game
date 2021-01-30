@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
 }
 
-.user-form{
+.user-form {
   display: flex;
   justify-content: space-between;
 }
