@@ -44,9 +44,7 @@ export default class GameScene extends Phaser.Scene{
   }
   update(){
     this.displayMessage(30,30,"Score:"+this.score);
-    if(this.count <= 0){
-      this.gameOver();
-    }
+    
     if(!this.playerLife){
       return;
     }
@@ -90,6 +88,10 @@ export default class GameScene extends Phaser.Scene{
       this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
       this.foodSound.play();
       
+    }
+    if(this.count < 0){
+      this.gameOver();
+      break;
     }
   }
   }

@@ -7,7 +7,7 @@ export default class ScoreScene extends Phaser.Scene{
   }
  
   create () {
-    this.heading = this.add.text(40,40, 
+    this.heading = this.add.text(config.width / 2 - 100, 100,
       "TOP 5 SCORES",{
         fontSize: '40px',
           fill: '#ffffff',
