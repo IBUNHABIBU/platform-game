@@ -44,7 +44,7 @@ The player is the monster fish who eats all the small fish and being eaten by th
 - It shows the scores.
 
 
-## [Live demo](https://ibunhabibphasergame.netlify.app/ "Of the project")
+## [Live demo](https://ibunhabibmonsterfish.netlify.app/ "Of the project")
 <br/>
 <div align="center">
 
