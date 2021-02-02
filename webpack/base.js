@@ -1,3 +1,4 @@
+const webpack = require('webpack'); // eslint-disable-line import/no-extraneous-dependencies
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
