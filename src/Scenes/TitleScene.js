@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 
 import config from '../Config/config';
 
@@ -15,7 +15,7 @@ export default class TitleScene extends Phaser.Scene {
     this.gameText = this.add.text(0, 0, 'Play', { fontSize: '32px', fill: '#fff' });
     this.centerButtonText(this.gameText, this.gameButton);
 
-    this.gameButton.on('pointerdown', (pointer) => {
+    this.gameButton.on('pointerdown', () => {
       this.scene.start('Game');
     });
 
@@ -31,7 +31,7 @@ export default class TitleScene extends Phaser.Scene {
     this.scoreText = this.add.text(0, 0, 'TopScores', { fontSize: '32px', fill: '#fff' });
     Phaser.Display.Align.In.Center(this.scoreText, this.scoreButton);
 
-    this.scoreButton.on('pointerdown', (pointer) => {
+    this.scoreButton.on('pointerdown', () => {
       this.scene.start('Scores');
     });
 
@@ -41,18 +41,17 @@ export default class TitleScene extends Phaser.Scene {
     this.optionsText = this.add.text(0, 0, 'Options', { fontSize: '32px', fill: '#fff' });
     this.centerButtonText(this.optionsText, this.optionsButton);
 
-    this.optionsButton.on('pointerdown', (pointer) => {
+    this.optionsButton.on('pointerdown', () => {
       this.scene.start('Options');
     });
 
-    // Credits
     this.creditsButton = this.add.sprite(300, 200, 'blueButton2').setInteractive();
     this.centerButton(this.creditsButton, -1);
 
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
     this.centerButtonText(this.creditsText, this.creditsButton);
 
-    this.creditsButton.on('pointerdown', (pointer) => {
+    this.creditsButton.on('pointerdown', () => {
       this.scene.start('Credits');
     });
 

@@ -5,12 +5,8 @@ export default class OptionsScene extends Phaser.Scene {
     super('Options');
   }
 
-  preload() {
-  }
-
   create() {
     this.model = this.sys.game.globals.model;
-
     this.text = this.add.text(300, 100, 'Options', { fontSize: 40 });
     this.musicButton = this.add.image(200, 200, 'blueBoxCheckMark');
     this.musicText = this.add.text(250, 190, 'Music Enabled', { fontSize: 24 });
@@ -35,7 +31,7 @@ export default class OptionsScene extends Phaser.Scene {
     this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
 
-    this.menuButton.on('pointerdown', (pointer) => {
+    this.menuButton.on('pointerdown', () => {
       this.scene.start('Name');
     });
 

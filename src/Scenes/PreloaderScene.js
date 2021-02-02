@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import blueButton2 from '../assets/ui/blue_button02.png';
 import blueButton3 from '../assets/ui/blue_button03.png';
 import box from '../assets/ui/grey_box.png';
@@ -24,15 +24,11 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    // add logo image
     this.add.image(400, 200, 'logo');
-
-    // display progress bar
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
     progressBox.fillRect(240, 270, 320, 50);
-
     const { width } = this.cameras.main;
     const { height } = this.cameras.main;
     const loadingText = this.make.text({
@@ -45,7 +41,6 @@ export default class PreloaderScene extends Phaser.Scene {
       },
     });
     loadingText.setOrigin(0.5, 0.5);
-
     const percentText = this.make.text({
       x: width / 2,
       y: height / 2 - 5,
@@ -116,7 +111,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
   ready() {
     this.scene.start('Name');
-    this.readyCount++;
+    this.readyCount += 1;
     if (this.readyCount === 2) {
       this.scene.start('Name');
     }

@@ -9,16 +9,17 @@ const API = (() => {
     return sortedScore;
   };
   const addScore = async (name, score) => {
-    const _score = {
+    const playerScore = {
       user: `${name}`,
       score,
     };
+
     try {
       const request = await fetch(baseUrl,
         {
           mode: 'cors',
           method: 'POST',
-          body: JSON.stringify(_score),
+          body: JSON.stringify(playerScore),
           headers: { 'Content-type': 'application/json; charset=UTF-8' },
         });
       const response = await request.json();
@@ -27,8 +28,8 @@ const API = (() => {
       return error;
     }
   };
+
   const getScores = async () => {
-    
     try {
       const response = await fetch(baseUrl);
       const data = await response.json();

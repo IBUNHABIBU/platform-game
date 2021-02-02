@@ -72,7 +72,7 @@ export default class GameScene extends Phaser.Scene {
     const enemies = this.enemies.getChildren();
     const num = enemies.length;
     this.model = this.sys.game.globals.model;
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i < num; i += 1) {
       enemies[i].flipX = true;
       enemies[i].x += enemies[i].speed;
       if (enemies[i].x >= this.enemyMaxX && enemies[i].speed > 0) {
@@ -80,7 +80,7 @@ export default class GameScene extends Phaser.Scene {
       } else if (enemies[i].x < this.enemyMinX && enemies[i].speed < 0) {
         this.displayMessage(this.width / 2, this.height / 2, `${this.count}remained`);
         enemies[i].x = this.sys.game.config.width;
-        this.count--;
+        this.count -= 1;
       }
 
       if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), enemies[i].getBounds())) {
@@ -114,10 +114,10 @@ export default class GameScene extends Phaser.Scene {
     this.gotoMenuText = this.add.text(0, 0, ' Menu', { fontSize: '32px', fill: '#fff' });
     Phaser.Display.Align.In.Center(this.gotoMenuText, this.gotoMenu);
 
-    this.resetButton.on('pointerdown', (pointer) => {
+    this.resetButton.on('pointerdown', () => {
       this.scene.restart();
     });
-    this.gotoMenu.on('pointerdown', (pointer) => {
+    this.gotoMenu.on('pointerdown', () => {
       this.scene.start('Title');
     });
   }

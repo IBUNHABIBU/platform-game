@@ -35,7 +35,7 @@ export default class ScoreScene extends Phaser.Scene {
     this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
 
-    this.menuButton.on('pointerdown', (pointer) => {
+    this.menuButton.on('pointerdown', () => {
       this.scene.start('Title');
     });
   }
