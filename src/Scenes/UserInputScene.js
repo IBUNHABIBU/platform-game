@@ -30,7 +30,7 @@ export default class UserInput extends Phaser.Scene {
      'Start',
     )
     
-     const button = document.querySelector('button');
+    const button = document.querySelector('button');
      
     button.setAttribute('type', 'submit');
     
