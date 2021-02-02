@@ -1,58 +1,58 @@
-import Phaser from 'phaser';
+import Phaser from 'phaser'
 
 export default class OptionsScene extends Phaser.Scene {
   constructor () {
-    super('Options');
+    super('Options')
   }
- 
+
   preload () {
   }
- 
-  create () {
-    
-    this.model = this.sys.game.globals.model;
- 
-    this.text = this.add.text(300, 100, 'Options', { fontSize: 40 });
-    this.musicButton = this.add.image(200, 200, 'blueBoxCheckMark');
-    this.musicText = this.add.text(250, 190, 'Music Enabled', { fontSize: 24 });
- 
-    this.soundButton = this.add.image(200, 300, 'blueBoxCheckMark');
-    this.soundText = this.add.text(250, 290, 'Sound Enabled', { fontSize: 24 });
- 
-    this.musicButton.setInteractive();
-    this.soundButton.setInteractive();
- 
-    this.musicButton.on('pointerdown', function () {
-      this.model.musicOn = !this.model.musicOn;
-      this.updateAudio();
-    }.bind(this));
- 
-    this.soundButton.on('pointerdown', function () {
-      this.model.soundOn = !this.model.soundOn;
-      this.updateAudio();
-    }.bind(this));
- 
-     this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive();
-     this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
-     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
- 
-     this.menuButton.on('pointerdown', function (pointer) {
-       this.scene.start('Name');
-     }.bind(this));
 
-     this.updateAudio();
+  create () {
+    this.model = this.sys.game.globals.model
+
+    this.text = this.add.text(300, 100, 'Options', { fontSize: 40 })
+    this.musicButton = this.add.image(200, 200, 'blueBoxCheckMark')
+    this.musicText = this.add.text(250, 190, 'Music Enabled', { fontSize: 24 })
+
+    this.soundButton = this.add.image(200, 300, 'blueBoxCheckMark')
+    this.soundText = this.add.text(250, 290, 'Sound Enabled', { fontSize: 24 })
+
+    this.musicButton.setInteractive()
+    this.soundButton.setInteractive()
+
+    this.musicButton.on('pointerdown', function () {
+      this.model.musicOn = !this.model.musicOn
+      this.updateAudio()
+    }.bind(this))
+
+    this.soundButton.on('pointerdown', function () {
+      this.model.soundOn = !this.model.soundOn
+      this.updateAudio()
+    }.bind(this))
+
+    this.menuButton = this.add.sprite(400, 500, 'blueButton2').setInteractive()
+    this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' })
+    Phaser.Display.Align.In.Center(this.menuText, this.menuButton)
+
+    this.menuButton.on('pointerdown', function (pointer) {
+      this.scene.start('Name')
+    }.bind(this))
+
+    this.updateAudio()
   }
-  updateAudio() {
+
+  updateAudio () {
     if (this.model.musicOn === false) {
-      this.musicButton.setTexture('box');
+      this.musicButton.setTexture('box')
     } else {
-      this.musicButton.setTexture('blueBoxCheckMark');
+      this.musicButton.setTexture('blueBoxCheckMark')
     }
-   
+
     if (this.model.soundOn === false) {
-      this.soundButton.setTexture('box');
+      this.soundButton.setTexture('box')
     } else {
-      this.soundButton.setTexture('blueBoxCheckMark');
+      this.soundButton.setTexture('blueBoxCheckMark')
     }
   }
 };
