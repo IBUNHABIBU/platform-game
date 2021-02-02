@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 
 import logo from"../assets/images/logo.jpg";
+
 export default class BootScene extends Phaser.Scene{
   constructor(){
     super('Boot');
