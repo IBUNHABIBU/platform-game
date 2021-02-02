@@ -35,7 +35,7 @@ export default class UserInput extends Phaser.Scene {
     button.setAttribute('type', 'submit');
 
     button.addEventListener('click', (event) => {
-      if (event.target.type == 'submit') {
+      if (event.target.type === 'submit') {
         const name = document.querySelector('input').value;
         if (name.length < 3) {
           this.add.text(
