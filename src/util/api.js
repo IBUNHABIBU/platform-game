@@ -1,5 +1,4 @@
-// import 'isomorphic-fetch';
-import regeneratorRuntime from 'regenerator-runtime'
+
 const API = (() => {
   const base_url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/SeKTSeD6Z4mXClBX7TIt/scores'
   const sortScore = (obj) => {
