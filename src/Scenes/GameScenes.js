@@ -83,7 +83,8 @@ export default class GameScene extends Phaser.Scene {
         this.count -= 1;
       }
 
-      if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), enemies[i].getBounds())) {
+      if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(),
+        enemies[i].getBounds())) {
         this.score += 15;
         enemies[i].x = this.sys.game.config.width;
         this.foodSound = this.sound.add('foodSound', { volume: 0.5, loop: false });
