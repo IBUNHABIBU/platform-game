@@ -37,7 +37,7 @@ export default class UserInput extends Phaser.Scene {
     button.addEventListener('click', (event) => {
       if(event.target.type == 'submit') {
         const name = document.querySelector('input').value;
-        if (name.length < 1) {
+        if (name.length < 3) {
           this.add.text(
             config.width / 4,
             253,
