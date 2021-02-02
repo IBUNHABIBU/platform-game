@@ -75,12 +75,10 @@ export default class PreloaderScene extends Phaser.Scene {
       progressBar.fillRect(250, 280, 300 * value, 30)
     })
 
-    // update file progress text
     this.load.on('fileprogress', function (file) {
       assetText.setText('Loading asset: ' + file.key)
     })
 
-    // remove progress bar when complete
     this.load.on('complete', function () {
       progressBar.destroy()
       progressBox.destroy()
