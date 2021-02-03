@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-underscore-dangle
 export default class Model {
   constructor() {
     this._soundOn = true;

@@ -43,7 +43,7 @@ export default class CreditsScene extends Phaser.Scene {
       onComplete: function () {
         this.madeByTween.destroy();
         this.scene.start('Title');
-      }.bind(this),
+      }.bind(this)
     });
   }
 }
