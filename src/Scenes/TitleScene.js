@@ -6,7 +6,20 @@ export default class TitleScene extends Phaser.Scene {
   constructor() {
     super('Title');
   }
+  
+  centerButton(gameObject, offset = 0) {
+    Phaser.Display.Align.In.Center(
+      gameObject,
+      this.add.zone(this.w / 2, this.h / 2 - offset * 100, this.w, this.h),
+    );
+  }
 
+  centerButtonText(gameText, gameButton) {
+    Phaser.Display.Align.In.Center(
+      gameText,
+      gameButton,
+    );
+  }
   create() {
     this.w = config.width;
     this.h = config.height;
@@ -72,17 +85,4 @@ export default class TitleScene extends Phaser.Scene {
     }
   }
 
-  centerButton(gameObject, offset = 0) {
-    Phaser.Display.Align.In.Center(
-      gameObject,
-      this.add.zone(this.w / 2, this.h / 2 - offset * 100, this.w, this.h),
-    );
-  }
-
-  centerButtonText(gameText, gameButton) {
-    Phaser.Display.Align.In.Center(
-      gameText,
-      gameButton,
-    );
-  }
 }
