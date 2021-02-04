@@ -79,6 +79,7 @@ export default class TitleScene extends Phaser.Scene {
     );
   }
 
+  /* eslint-disable class-methods-use-this */
   centerButtonText(gameText, gameButton) {
     Phaser.Display.Align.In.Center(
       gameText,
