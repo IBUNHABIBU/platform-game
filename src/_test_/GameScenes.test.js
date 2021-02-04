@@ -1,6 +1,7 @@
 import GameScene from '../Scenes/GameScenes';
 
-const game = new GameScene()
+const game = new GameScene();
+
 test('GameScene is of type function', () => {
   expect(typeof GameScene).toBe('function');
 });

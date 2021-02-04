@@ -1,6 +1,7 @@
 import OptionScene from '../Scenes/OptionScene';
 
-const option = new OptionScene()
+const option = new OptionScene();
+
 test('OptionScene is of type function', () => {
   expect(typeof OptionScene).toBe('function');
 });
