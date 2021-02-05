@@ -17,7 +17,7 @@ class Game extends Phaser.Game {
     this.globals = {
       model,
       playerName: '',
-      bgMusic: null
+      bgMusic: null,
     };
 
     this.scene.add('Boot', BootScenes);

@@ -23,15 +23,15 @@ export default class UserInput extends Phaser.Scene {
         fontSize: '20px',
         fill: '#ffffff',
       });
-      
+
     this.input = this.add.dom(config.width / 2, config.height / 2, 'input',
       'background-color: #fff; width: 250px; height: 30px; font: 16px Times New Roman');
-    
-      this.add.text(config.width / 2.6,
-        260, 'Enter your name', {
-          fontSize: '20px',
-          fill: '#ffffff',
-        });
+
+    this.add.text(config.width / 2.6,
+      260, 'Enter your name', {
+        fontSize: '20px',
+        fill: '#ffffff',
+      });
     this.button = this.add.dom(config.width / 2, config.height / 1.7, 'button',
       'background-color: #008cba; color: #fff; width: 250px; height: 30px; font: 16px Times New Roman; border:none;border-radius: 10px',
       'Start');
