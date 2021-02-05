@@ -21,11 +21,11 @@ export default class Model {
     return this._soundOn;
   }
 
-  set _bgMusicPlaying(value) {
-    this.__bgMusicPlaying = value;
+  set bgMusicPlaying(value) {
+    this._bgMusicPlaying = value;
   }
 
-  get _bgMusicPlaying() {
-    return this.__bgMusicPlaying;
+  get bgMusicPlaying() {
+    return this._bgMusicPlaying;
   }
 }
