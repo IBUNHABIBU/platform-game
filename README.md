@@ -70,7 +70,7 @@ To run Library-project locally, clone the repository, navigate to it's containin
 
 #### Follow these commands step by step:-
 
-```bash
+```
 git clone git@github.com:IBUNHABIBU/platform-game.git
 
 cd platform-game
