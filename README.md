@@ -66,7 +66,7 @@ This project was built using these technologies.
 
 ### How to Install 
 
-To run Library-project locally, clone the repository, navigate to it's containing directory.
+To run this project locally, clone the repository, navigate to it's containing directory.
 
 #### Follow these commands step by step:-
 
